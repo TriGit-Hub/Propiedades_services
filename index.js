@@ -211,7 +211,7 @@ app.use(cors());
 app.use(express.json());
 // Configuración de CORS para permitir el acceso desde el frontend en otro puerto
 app.use(cors({
-  origin: 'http://localhost:3000' // Cambia a la URL del frontend si es necesario
+  origin: 'http://165.232.135.27' // Cambia a la URL del frontend si es necesario
 }));
 // Usar las rutas de propiedades
 app.use('/propiedades', propertyRoutes);
