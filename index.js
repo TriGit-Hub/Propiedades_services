@@ -209,7 +209,10 @@ app.delete('/movimientos/:id', async (req, res) => {
 app.use(cors());
 // Middleware para manejar datos JSON
 app.use(express.json());
-
+// Configuración de CORS para permitir el acceso desde el frontend en otro puerto
+app.use(cors({
+  origin: 'http://localhost:3000' // Cambia a la URL del frontend si es necesario
+}));
 // Usar las rutas de propiedades
 app.use('/propiedades', propertyRoutes);
 // Iniciar servidor
